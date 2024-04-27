@@ -41,11 +41,14 @@ public class main {
                 System.out.println("File Exists");
                 FileInputStream fin = new FileInputStream(filePath);
                 // function that uses the filePath use the for loop below
+                // read the file and display the data
+
                 fin.close();
             } else {
                 System.out.println("File does not exist");
                 FileOutputStream fout = new FileOutputStream(filePath);
                 // function that uses the filePath use the for loop below
+                // read the file and display the data
                 fout.close();
             }
         } catch (IOException e) {
@@ -56,6 +59,7 @@ public class main {
         System.out.println("Options: add, delete, edit, or exit");
         System.out.println("Enter option: ");
         String option = scnr.nextLine();
+        int hours = 0;
 
         while (true) {
             // if statement to determine the option
@@ -66,9 +70,7 @@ public class main {
                 System.out.println("Enter time: ");
                 String time = scnr.nextLine();
                 System.out.println("Enter hours: ");
-                String hours = scnr.nextLine();
-                System.out.println("Enter possible amount: ");
-                String amount = scnr.nextLine();
+                hours = scnr.nextInt();
                 // writes the data into the file
 
             } else if (option.equalsIgnoreCase("delete")) {
@@ -84,9 +86,7 @@ public class main {
                 System.out.println("Enter time: ");
                 String time = scnr.nextLine();
                 System.out.println("Enter hours: ");
-                String hours = scnr.nextLine();
-                System.out.println("Enter possible amount: ");
-                String amount = scnr.nextLine();
+                hours = scnr.nextInt();
                 // writes the data into the file
 
             } else if (option.equalsIgnoreCase("exit")) {
