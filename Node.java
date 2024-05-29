@@ -1,43 +1,39 @@
 public class Node<T> {
-    public T averagehour;
-    public Node<T> next;
-    public Node<T> prev;
-    public Node<T> down;
+    String info;
+    Node<T> right;
+    Node<T> left;
+    Node<T> down;
 
-    public void setAveragehour(T averagehour) {
-        this.averagehour = averagehour;
+    public Node(String info){
+        this.info = info;
+        this.right = null;
+        this.left = null;
+        this.down = null;
     }
 
-    public void setdown(Node<T> down) {
-        this.down = down;
+    public String getInfo(){
+        return info;
     }
-
-    public void setNext(Node<T> next) {
-        this.next = next;
+    public void setInfo(String info){
+        this.info = info;
     }
-
-    public void setPrev(Node<T> prev) {
-        this.prev = prev;
+    public Node<T> getRight() {
+        return right;
     }
-
-    // Accessors
-    public T getAveragehour() {
-        return averagehour;
+    public void setRight(Node<T> right) {
+        this.right = right;
     }
-
+    public Node<T> getLeft() {
+        return left;
+    }
+    public void setLeft(Node<T> left) {
+        this.left = left;
+    }
     public Node<T> getDown() {
         return down;
     }
-
-    public Node<T> getNext() {
-        return next;
+    public void setDown(Node<T> down){
+        this.down = down;
     }
 
-    public Node<T> getPrev() {
-        return prev;
-    }
-
-    public Node(T averagehour) {
-        this.averagehour = averagehour;
-    }
 }
